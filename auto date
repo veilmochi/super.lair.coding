@@ -1,0 +1,14 @@
+function onEdit(e) {
+  
+var row = e.range.getRow();
+var col = e.range.getColumn();
+
+if(col == 26 && row > 1 && e.source.getActiveSheet().getName() === "Data" ){
+  e.source.getActiveSheet().getRange(row,27).setValue(new Date());
+}
+
+if(col == 28 && row > 1 && e.source.getActiveSheet().getName() === "Data" ){
+  e.source.getActiveSheet().getRange(row,30).setValue(new Date());
+}
+
+}
